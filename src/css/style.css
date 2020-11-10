@@ -87,3 +87,67 @@ header ul li a {
     z-index: 10;
     margin: auto;
 }
+
+.imgContent {
+    position: relative;
+    margin-left: 10px;
+}
+
+.imgContent a {
+    color: white;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.imgContent a:hover {
+    text-decoration: underline;
+}
+
+#gameAutoDetect, #gavilyaLanguages {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#gameAutoDetect img {
+    width: 50%;
+    margin-left: 50px;
+}
+
+#gavilyaLanguages img {
+    width: 50%;
+    margin-left: 50px;
+}
+
+#download {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    background-color: var(--second-bg-color);
+    border-radius: 15px;
+}
+
+.btnPrimary {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgba(62,132,237,1) 0%, rgba(55,121,238,1) 100%);
+    cursor: pointer;
+    border: 0px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.5s;
+    margin-top: 20px;
+}
+
+.btnPrimary:hover {
+    background: linear-gradient(90deg, rgba(0,226,10,1) 0%, rgba(0,251,28,1) 100%);
+}
