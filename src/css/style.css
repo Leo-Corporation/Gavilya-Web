@@ -151,3 +151,22 @@ header ul li a {
 .btnPrimary:hover {
     background: linear-gradient(90deg, rgba(0,226,10,1) 0%, rgba(0,251,28,1) 100%);
 }
+
+footer {
+    display: flex;
+}
+
+footer div {
+    margin-right: 30px;
+    margin-left: 10px;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+footer a {
+    color: white;
+}
+
+footer ul li {
+    list-style: none;
+}

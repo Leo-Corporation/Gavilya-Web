@@ -48,6 +48,33 @@
         <h2>Start using Gavilya right now!</h2>
         <button class="btnPrimary">Download for Windows</button>
     </section>
+
+    <footer>
+        <div>
+            <h3>Gavilya</h2>
+                <p>by Léo Corporation</p>
+        </div>
+        <div>
+            <h3>Useful links</h3>
+            <ul>
+                <li><a href="https://leocorp.fr">Website</a></li>
+                <li><a href="https://twitter.com/LeoCorpNews">Twitter</a></li>
+                <li><a href="https://github.com/Leo-Corporation/Gavilya/">GitHub</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>About</h3>
+            <p id="copyright">Copyright</p>
+        </div>
+
+        <script>
+            // Update the copyright year automatically
+            const currentDate = new Date().getFullYear();
+            document.getElementById("copyright").innerHTML = "© " + currentDate + " - Léo Corporation";
+            console.info("The current year is " + currentDate);
+        </script>
+
+    </footer>
 </body>
 
 </html>
