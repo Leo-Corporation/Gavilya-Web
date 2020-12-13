@@ -153,6 +153,12 @@ header ul li a {
     background: linear-gradient(90deg, rgba(0,226,10,1) 0%, rgba(0,251,28,1) 100%);
 }
 
+.btnPrimary a, .btnPrimary a:visited {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
 footer {
     display: flex;
 }
