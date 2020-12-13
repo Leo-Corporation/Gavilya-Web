@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Gavilya - A simple game launcher</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Gavilya</a>
+        <ul>
+            <li><a href="index.html#">Home</a></li>
+            <li><a href="index.html#download">Download</a></li>
+            <li><a href="/about.html">About</a></li>
+        </ul>
+
+        <div class="header-menu">
+            <input type="checkbox" id="chk">
+            <label class="show-menu-btn" for="chk">
+                <img width="32px" height="32px" src="img/menu.png">
+            </label>
+            <ul class="menu">
+                <a id="menu" href="index.html#">Home</a>
+                <a id="menu" href="index.html#download">Download</a>
+                <a id="menu" href="/about.html">About</a>
+
+                <label for="chk" class="hide-menu-btn">
+                    <img width="32px" height="32px" src="img/close.png">
+                </label>
+            </ul>
+
+
+        </div>
+    </header>
+    <section class="banner">
+        <h1>All your games in one place</h1>
+    </section>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
+
+    <section id="gameAutoDetect">
+        <img src="img/gameAutoDetect.png" />
+        <div class="imgContent">
+            <h2>Game Auto Detection</h2>
+            <p>Thanks to the <a href="https://rawg.io">RAWG.io</a> integration with Gavilya, when you are adding a game,
+                it's informations are automatically found in the RAWG database.</p>
+        </div>
+    </section>
+
+    <section id="gavilyaLanguages">
+        <div class="imgContent">
+            <h2>Multilingual</h2>
+            <p>Gavilya is is available in multiple languages, such as English (US), French (France)...</p>
+        </div>
+        <img src="img/GavLangs.gif" />
+    </section>
+
+    <section id="download">
+        <h2>Start using Gavilya right now!</h2>
+        <button class="btnPrimary"><a href="https://bit.ly/Gavilya">Download for Windows</a></button>
+    </section>
+
+    <footer>
+        <div>
+            <h3>Gavilya</h2>
+                <p>by Léo Corporation</p>
+        </div>
+        <div>
+            <h3>Useful links</h3>
+            <ul>
+                <li><a href="https://leocorp.fr">Website</a></li>
+                <li><a href="https://twitter.com/LeoCorpNews">Twitter</a></li>
+                <li><a href="https://github.com/Leo-Corporation/Gavilya/">GitHub</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>About</h3>
+            <p id="copyright">Copyright</p>
+        </div>
+
+        <script>
+            // Update the copyright year automatically
+            const currentDate = new Date().getFullYear();
+            document.getElementById("copyright").innerHTML = "© " + currentDate + " - Léo Corporation";
+            console.info("The current year is " + currentDate);
+        </script>
+
+    </footer>
+</body>
+
+</html>
