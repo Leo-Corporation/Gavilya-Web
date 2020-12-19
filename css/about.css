@@ -1,0 +1,22 @@
+.separator {
+    min-height: 20vh;
+}
+
+.content {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+html, body {
+    height: 100%;
+    min-height: 50%;
+}
+a {
+    color: var(--main-fg-color);
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+}
