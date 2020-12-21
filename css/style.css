@@ -110,6 +110,8 @@ header ul li a {
     width: 100%;
     display: flex;
     margin-bottom: 10px;
+    animation-name: fadein;
+    animation-duration: 3s;
 }
 
 #gameAutoDetect img {
@@ -224,6 +226,11 @@ footer ul li {
     position: absolute;
     visibility: hidden;
     z-index: -1111;
+}
+
+@keyframes fadein {
+    from { opacity: 0%; }
+    to { opacity: 100%; }
 }
 
 @media screen and (max-width: 520px) {
