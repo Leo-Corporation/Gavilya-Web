@@ -3,104 +3,105 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
     <title>Gavilya - A simple game launcher</title>
-    <link rel="icon" href="img/favicon.ico" type="image/icon type">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0EC2QLLXKJ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-0EC2QLLXKJ');
-    </script>
 </head>
 
-<body>
-    <header>
-        <a href="#" class="logo">Gavilya</a>
-        <ul>
+<body style="background-color: rgb(0, 0, 20); font-family: 'Montserrat', sans-serif;" class="m-8">
+    <header class="text-white flex flex-row space-x-4 inline-block items-center">
+        <a href="#">
+            <h1 class="text-5xl font-bold mr-8">Gavilya</h1>
+        </a>
+        <ul class="flex flex-row space-x-4 font-semibold invisible sm:visible inline-block">
             <li><a href="#">Home</a></li>
             <li><a href="#download">Download</a></li>
             <li><a href="about">About</a></li>
         </ul>
 
-        <div class="header-menu">
-            <input type="checkbox" id="chk">
-            <label class="show-menu-btn" for="chk">
-                <img width="32px" height="32px" src="img/menu.png">
-            </label>
-            <ul class="menu">
-                <a id="menu" href="#">Home</a>
-                <a id="menu" href="#download">Download</a>
-                <a id="menu" href="about">About</a>
-
-                <label for="chk" class="hide-menu-btn">
-                    <img width="32px" height="32px" src="img/close.png">
-                </label>
-            </ul>
-
-
-        </div>
     </header>
-    <section class="banner">
-        <h1>All your games in one place</h1>
-    </section>
-    <script type="text/javascript">
-        window.addEventListener("scroll", function () {
-            var header = document.querySelector("header");
-            header.classList.toggle("sticky", window.scrollY > 0);
-        })
-    </script>
 
-    <section id="gameAutoDetect">
-        <img src="img/gameAutoDetect.png" />
-        <div class="imgContent">
-            <h2>Game Auto Detection</h2>
-            <p>Thanks to the <a href="https://rawg.io">RAWG.io</a> integration with Gavilya, when you are adding a game,
-                it's informations are automatically found in the RAWG database.</p>
+    <div id="content" class="my-16">
+        <div id="intro" class="grid grid-cols-1 sm:grid-cols-2">
+            <div>
+                <h2 class="text-white font-bold text-4xl">All your games in one place.</h2>
+                <p class="text-white my-8">Gavilya gathers all your video games in one place. Nowadays, more and more
+                    games
+                    are
+                    available in different game launchers, and it is annoying for a lot of people. This is why we
+                    created
+                    Gavilya. A simple game launcher launcher with a lot of features and personnalization.</p>
+            </div>
+            <div>
+                <img src="/src/img/screenshot2.png" class="max-h-96	hidden sm:block sm:visible">
+            </div>
         </div>
-    </section>
 
-    <section id="gavilyaLanguages">
-        <div class="imgContent">
-            <h2>Multilingual</h2>
-            <p>Gavilya is is available in multiple languages, such as English (US), French (France)...</p>
+        <div id="features" class="text-white">
+            <h2 class="text-white font-bold text-4xl text-center">Features</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 my-2">
+                <div class="bg-gradient-to-r from-blue-600 to-blue-500 p-5 rounded-2xl m-2 shadow-lg">
+                    <h3 class="font-bold text-2xl">RAWG.io integration</h3>
+                    <p>Gavilya is integrated with the <a href="https://rawg.io">RAWG.io</a> database. Thanks to this
+                        integration, Gavilya can auto-detect your games, download a cover image and the game's
+                        informations.</p>
+                </div>
+                <div class="bg-gradient-to-r from-blue-600 to-blue-500 p-5 rounded-2xl m-2 shadow-lg">
+                    <h3 class="font-bold text-2xl">Dark theme</h3>
+                    <p>Gamers love dark theme, that's why we've decided to make Gavilya only in dark theme. (Also, it
+                        looks better)</p>
+                </div>
+                <div class="bg-gradient-to-r from-blue-600 to-blue-500 p-5 rounded-2xl m-2 shadow-lg">
+                    <h3 class="font-bold text-2xl">Multiple views</h3>
+                    <p>When you launch Gavilya for the first time, you will land in the "Cards" view, but you may prefer
+                        a "List" view or even a "Recent" view. Gavilya offers the possibility to choose the view you
+                        like the most.</p>
+                </div>
+                <div class="bg-gradient-to-r from-blue-600 to-blue-500 p-5 rounded-2xl m-2 shadow-lg">
+                    <h3 class="font-bold text-2xl">Languages</h3>
+                    <p>Gavilya is available in multiple languages: English (United States), of course, and French
+                        (France).</p>
+                </div>
+                <div class="bg-gradient-to-r from-blue-600 to-blue-500 p-5 rounded-2xl m-2 shadow-lg">
+                    <h3 class="font-bold text-2xl">Import and export</h3>
+                    <p>If you've installed Gavilya on a new PC, you may wanna get your games back in Gavilya. Gavilya
+                        offers the possibility to import and export games, so you won't loose your stats!</p>
+                </div>
+                <div class="bg-gradient-to-r from-blue-600 to-blue-500 p-5 rounded-2xl m-2 shadow-lg">
+                    <h3 class="font-bold text-2xl">Favorite bar</h3>
+                    <p>If you have a lot of games, but you want to quicky jump to your favorites, we've added a favorite
+                        bar in Gavilya. You can add and remove games to your favorites.</p>
+                </div>
+            </div>
         </div>
-        <img src="img/GavLangs.gif" />
-    </section>
 
-    <section id="download">
-        <h2>Start using Gavilya right now!</h2>
-        <button class="btnPrimary"><a href="https://bit.ly/Gavilya">Download for Windows</a></button>
-    </section>
+        <div id="download" class="text-white grid grid-rows-3 flex justify-center">
+            <h2 class="text-white font-bold text-4xl text-center">Download</h2>
+            <p class="text-center">Gavilya is available only on Windows and is free.</p>
+            <a class="text-center mx-24 font-bold bg-gradient-to-r from-green-600 to-green-500 rounded-xl p-5 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50"
+                href="https://bit.ly/Gavilya">Download Gavilya</a>
+        </div>
+    </div>
 
-    <footer>
+    <footer class="text-white grid grid-cols-2">
         <div>
-            <h3>Gavilya</h2>
-                <p>by Léo Corporation</p>
-        </div>
-        <div>
-            <h3>Useful links</h3>
+            <h3 class="font-bold text-2xl">Links</h3>
             <ul>
-                <li><a href="https://leocorp.fr">Website</a></li>
-                <li><a href="https://twitter.com/LeoCorpNews">Twitter</a></li>
-                <li><a href="https://github.com/Leo-Corporation/Gavilya/">GitHub</a></li>
+                <li><a class="hover:underline" href="https://www.leocorp.fr/">Website</a></li>
+                <li><a class="hover:underline" href="https://twitter.com/LeoCorpNews">Twitter</a></li>
+                <li><a class="hover:underline" href="https://leopeyronnetcorp.blogspot.com/">Blog</a></li>
             </ul>
         </div>
         <div>
-            <h3>About</h3>
-            <p id="copyright">Copyright</p>
+            <h3 class="font-bold text-2xl">Copyright</h3>
+            <p id="copyright-p"></p>
+            <script src="scripts/copyright.js"></script>
         </div>
-
-        <script>
-            // Update the copyright year automatically
-            const currentDate = new Date().getFullYear();
-            document.getElementById("copyright").innerHTML = "© " + currentDate + " - Léo Corporation";
-            console.info("The current year is " + currentDate);
-        </script>
 
     </footer>
 </body>

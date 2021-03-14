@@ -3,88 +3,49 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/about.css" />
-    <link rel="icon" href="img/favicon.ico" type="image/icon type">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0EC2QLLXKJ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-0EC2QLLXKJ');
-    </script>
-    <title>Gavilya</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <title>Gavilya - About</title>
 </head>
 
-<body>
-    <header>
-        <a href="#" class="logo">Gavilya</a>
-        <ul>
+<body style="background-color: rgb(0, 0, 20); font-family: 'Montserrat', sans-serif;" class="m-8">
+    <header class="text-white flex flex-row space-x-4 inline-block items-center">
+        <a href="#">
+            <h1 class="text-5xl font-bold mr-8">Gavilya</h1>
+        </a>
+        <ul class="flex flex-row space-x-4 font-semibold invisible sm:visible inline-block">
             <li><a href="index">Home</a></li>
             <li><a href="index#download">Download</a></li>
             <li><a href="#">About</a></li>
         </ul>
 
-        <div class=" header-menu">
-            <input type="checkbox" id="chk">
-            <label class="show-menu-btn" for="chk">
-                <img width="32px" height="32px" src="img/menu.png">
-            </label>
-            <ul class="menu">
-                <a id="menu" href="index">Home</a>
-                <a id="menu" href="index#download">Download</a>
-                <a id="menu" href="#">About</a>
-
-                <label for="chk" class="hide-menu-btn">
-                    <img width="32px" height="32px" src="img/close.png">
-                </label>
-            </ul>
-        </div>
     </header>
 
-    <script type="text/javascript">
-        window.addEventListener("scroll", function () {
-            var header = document.querySelector("header");
-            header.classList.toggle("sticky", window.scrollY > 0);
-        })
-    </script>
+    <div id="content" class="text-white text-center m-10 items-center h-96">
+        <h1 class="text-3xl font-bold">Gavilya</h1>
+        <p>Gavilya is a simple game launcher created by <a href="https://www.leocorp.fr/">Léo Corporation</a>. It's goal
+            is to unite all your games on your computer in the same place. </p>
+    </div>
 
-    <div class="separator"></div>
-
-    <section class="content">
-        <img src="img/favicon.ico">
-        <h2>About Gavilya</h2>
-        <p>Gavilya is a simple game launcher created by <a href="leocorp.fr">Léo Corporation</a>. It's goal is to unite
-            all your games on your computer in the same place.</p>
-    </section>
-
-    <footer>
+    <footer class="text-white grid grid-cols-2">
         <div>
-            <h3>Gavilya</h2>
-                <p>by Léo Corporation</p>
-        </div>
-        <div>
-            <h3>Useful links</h3>
+            <h3 class="font-bold text-2xl">Links</h3>
             <ul>
-                <li><a href="https://leocorp.fr">Website</a></li>
-                <li><a href="https://twitter.com/LeoCorpNews">Twitter</a></li>
-                <li><a href="https://github.com/Leo-Corporation/Gavilya/">GitHub</a></li>
+                <li><a class="hover:underline" href="https://www.leocorp.fr/">Website</a></li>
+                <li><a class="hover:underline" href="https://twitter.com/LeoCorpNews">Twitter</a></li>
+                <li><a class="hover:underline" href="https://leopeyronnetcorp.blogspot.com/">Blog</a></li>
             </ul>
         </div>
         <div>
-            <h3>About</h3>
-            <p id="copyright">Copyright</p>
+            <h3 class="font-bold text-2xl">Copyright</h3>
+            <p id="copyright-p"></p>
+            <script src="scripts/copyright.js"></script>
         </div>
-
-        <script>
-            // Update the copyright year automatically
-            const currentDate = new Date().getFullYear();
-            document.getElementById("copyright").innerHTML = "© " + currentDate + " - Léo Corporation";
-            console.info("The current year is " + currentDate);
-        </script>
 
     </footer>
 </body>
