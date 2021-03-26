@@ -35,16 +35,36 @@
         </ul>
     </header>
 
-    <div id="content" class="my-16">
+    <div id="content" class="my-16 text-white">
         <div id="intro" class="grid grid-cols-1 sm:grid-cols-2">
             <div>
                 <h2 class="text-white font-bold text-4xl">Download Gavilya Now.</h2>
                 <p class="text-white my-8">Download Gavilya today to enjoy the confort of having a single game launcher.</p>
+                <a id="downloadLink" class="text-center font-bold bg-gradient-to-r from-green-600 to-green-500 rounded-xl p-5 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50"
+                href="https://bit.ly/Gavilya">Download Gavilya Version [ver]</a>
+                <script src="scripts/getversion.js"></script>
             </div>
             <div>
-                <img src="/src/img/screenshot3.png" class="max-h-96	hidden sm:block sm:visible">
+                <img src="img/screenshot3.png" class="max-h-96	hidden sm:block sm:visible">
             </div>
         </div>
     </div>
+
+    <footer style="bottom: 0px;" class="absolute my-4 text-white grid grid-cols-2">
+        <div>
+            <h3 class="font-bold text-2xl">Links</h3>
+            <ul>
+                <li><a class="hover:underline" href="https://www.leocorp.fr/">Website</a></li>
+                <li><a class="hover:underline" href="https://twitter.com/LeoCorpNews">Twitter</a></li>
+                <li><a class="hover:underline" href="https://leopeyronnetcorp.blogspot.com/">Blog</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="font-bold text-2xl">Copyright</h3>
+            <p id="copyright-p"></p>
+            <script src="scripts/copyright.js"></script>
+        </div>
+
+    </footer>
 </body>
 </html>
