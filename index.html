@@ -43,7 +43,7 @@
     <title>Gavilya - A simple game launcher</title>
 </head>
 
-<body style="background-color: rgb(0, 0, 20); font-family: 'Montserrat', sans-serif;" class="m-8">
+<body style="background-color: rgb(0, 0, 20); font-family: 'Montserrat', sans-serif;">
     <header id="header" x-data="{ mobileMenuOpen : false }"
         class="backdrop-filter transition backdrop-blur-lg flex flex-wrap flex-row justify-between md:items-center md:space-x-4 sticky top-0 w-full py-6 px-6 text-white">
         <a href="#" class="block">
@@ -68,85 +68,92 @@
         </nav>
     </header>
 
-    <div id="content" class="my-16">
-        <div id="intro" class="grid grid-cols-1 sm:grid-cols-2">
-            <div>
-                <h2 class="text-white font-bold text-4xl">All your games in one place.</h2>
-                <p class="text-white my-8">Gavilya gathers all your video games in one place. Nowadays, more and more
-                    games
-                    are
-                    available in different game launchers, and it is annoying for a lot of people. This is why we
-                    created
-                    Gavilya. A simple game launcher launcher with a lot of features and personnalization.</p>
+    <div class="m-8">
+        <div id="content" class="my-16">
+            <div id="intro" class="grid grid-cols-1 sm:grid-cols-2">
+                <div>
+                    <h2 class="text-white font-bold text-4xl">All your games in one place.</h2>
+                    <p class="text-white my-8">Gavilya gathers all your video games in one place. Nowadays, more and
+                        more
+                        games
+                        are
+                        available in different game launchers, and it is annoying for a lot of people. This is why we
+                        created
+                        Gavilya. A simple game launcher launcher with a lot of features and personnalization.</p>
+                </div>
+                <div>
+                    <img src="img/screenshot2.png" class="max-h-96	hidden sm:block sm:visible">
+                </div>
             </div>
-            <div>
-                <img src="img/screenshot2.png" class="max-h-96	hidden sm:block sm:visible">
+
+            <div id="features" class="text-white">
+                <h2 class="text-white font-bold text-4xl text-center">Features</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 my-2">
+                    <div class="bg-gradient-to-r from-blue-600 to-blue-500 p-5 rounded-2xl m-2 shadow-lg">
+                        <h3 class="font-bold text-2xl">RAWG.io integration</h3>
+                        <p>Gavilya is integrated with the <a href="https://rawg.io">RAWG.io</a> database. Thanks to this
+                            integration, Gavilya can auto-detect your games, download a cover image and the game's
+                            informations.</p>
+                    </div>
+                    <div class="bg-gradient-to-r from-blue-600 to-blue-500 p-5 rounded-2xl m-2 shadow-lg">
+                        <h3 class="font-bold text-2xl">Dark theme</h3>
+                        <p>Gamers love dark theme, that's why we've decided to make Gavilya only in dark theme. (Also,
+                            it
+                            looks better)</p>
+                    </div>
+                    <div class="bg-gradient-to-r from-blue-600 to-blue-500 p-5 rounded-2xl m-2 shadow-lg">
+                        <h3 class="font-bold text-2xl">Multiple views</h3>
+                        <p>When you launch Gavilya for the first time, you will land in the "Cards" view, but you may
+                            prefer
+                            a "List" view or even a "Recent" view. Gavilya offers the possibility to choose the view you
+                            like the most.</p>
+                    </div>
+                    <div class="bg-gradient-to-r from-blue-600 to-blue-500 p-5 rounded-2xl m-2 shadow-lg">
+                        <h3 class="font-bold text-2xl">Languages</h3>
+                        <p>Gavilya is available in multiple languages: English (United States), of course, and French
+                            (France).</p>
+                    </div>
+                    <div class="bg-gradient-to-r from-blue-600 to-blue-500 p-5 rounded-2xl m-2 shadow-lg">
+                        <h3 class="font-bold text-2xl">Import and export</h3>
+                        <p>If you've installed Gavilya on a new PC, you may wanna get your games back in Gavilya.
+                            Gavilya
+                            offers the possibility to import and export games, so you won't loose your stats!</p>
+                    </div>
+                    <div class="bg-gradient-to-r from-blue-600 to-blue-500 p-5 rounded-2xl m-2 shadow-lg">
+                        <h3 class="font-bold text-2xl">Favorite bar</h3>
+                        <p>If you have a lot of games, but you want to quicky jump to your favorites, we've added a
+                            favorite
+                            bar in Gavilya. You can add and remove games to your favorites.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="download" class="text-white grid grid-rows-3 flex justify-center">
+                <h2 class="text-white font-bold text-4xl text-center">Download</h2>
+                <p class="text-center">Gavilya is available only on Windows and is free.</p>
+                <a class="text-center mx-24 font-bold bg-gradient-to-r from-green-600 to-green-500 rounded-xl p-5 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50"
+                    href="https://bit.ly/Gavilya">Download Gavilya</a>
             </div>
         </div>
 
-        <div id="features" class="text-white">
-            <h2 class="text-white font-bold text-4xl text-center">Features</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 my-2">
-                <div class="bg-gradient-to-r from-blue-600 to-blue-500 p-5 rounded-2xl m-2 shadow-lg">
-                    <h3 class="font-bold text-2xl">RAWG.io integration</h3>
-                    <p>Gavilya is integrated with the <a href="https://rawg.io">RAWG.io</a> database. Thanks to this
-                        integration, Gavilya can auto-detect your games, download a cover image and the game's
-                        informations.</p>
-                </div>
-                <div class="bg-gradient-to-r from-blue-600 to-blue-500 p-5 rounded-2xl m-2 shadow-lg">
-                    <h3 class="font-bold text-2xl">Dark theme</h3>
-                    <p>Gamers love dark theme, that's why we've decided to make Gavilya only in dark theme. (Also, it
-                        looks better)</p>
-                </div>
-                <div class="bg-gradient-to-r from-blue-600 to-blue-500 p-5 rounded-2xl m-2 shadow-lg">
-                    <h3 class="font-bold text-2xl">Multiple views</h3>
-                    <p>When you launch Gavilya for the first time, you will land in the "Cards" view, but you may prefer
-                        a "List" view or even a "Recent" view. Gavilya offers the possibility to choose the view you
-                        like the most.</p>
-                </div>
-                <div class="bg-gradient-to-r from-blue-600 to-blue-500 p-5 rounded-2xl m-2 shadow-lg">
-                    <h3 class="font-bold text-2xl">Languages</h3>
-                    <p>Gavilya is available in multiple languages: English (United States), of course, and French
-                        (France).</p>
-                </div>
-                <div class="bg-gradient-to-r from-blue-600 to-blue-500 p-5 rounded-2xl m-2 shadow-lg">
-                    <h3 class="font-bold text-2xl">Import and export</h3>
-                    <p>If you've installed Gavilya on a new PC, you may wanna get your games back in Gavilya. Gavilya
-                        offers the possibility to import and export games, so you won't loose your stats!</p>
-                </div>
-                <div class="bg-gradient-to-r from-blue-600 to-blue-500 p-5 rounded-2xl m-2 shadow-lg">
-                    <h3 class="font-bold text-2xl">Favorite bar</h3>
-                    <p>If you have a lot of games, but you want to quicky jump to your favorites, we've added a favorite
-                        bar in Gavilya. You can add and remove games to your favorites.</p>
-                </div>
+        <footer class="text-white grid grid-cols-2">
+            <div>
+                <h3 class="font-bold text-2xl">Links</h3>
+                <ul>
+                    <li><a class="hover:underline" href="https://leocorporation.dev/">Website</a></li>
+                    <li><a class="hover:underline" href="https://twitter.com/LeoCorpNews">Twitter</a></li>
+                    <li><a class="hover:underline" href="https://leopeyronnetcorp.blogspot.com/">Blog</a></li>
+                </ul>
             </div>
-        </div>
+            <div>
+                <h3 class="font-bold text-2xl">Copyright</h3>
+                <p id="copyright-p"></p>
+                <script src="scripts/copyright.js"></script>
+                <script src="scripts/scroll.js"></script>
+            </div>
 
-        <div id="download" class="text-white grid grid-rows-3 flex justify-center">
-            <h2 class="text-white font-bold text-4xl text-center">Download</h2>
-            <p class="text-center">Gavilya is available only on Windows and is free.</p>
-            <a class="text-center mx-24 font-bold bg-gradient-to-r from-green-600 to-green-500 rounded-xl p-5 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50"
-                href="https://bit.ly/Gavilya">Download Gavilya</a>
-        </div>
+        </footer>
     </div>
-
-    <footer class="text-white grid grid-cols-2">
-        <div>
-            <h3 class="font-bold text-2xl">Links</h3>
-            <ul>
-                <li><a class="hover:underline" href="https://leocorporation.dev/">Website</a></li>
-                <li><a class="hover:underline" href="https://twitter.com/LeoCorpNews">Twitter</a></li>
-                <li><a class="hover:underline" href="https://leopeyronnetcorp.blogspot.com/">Blog</a></li>
-            </ul>
-        </div>
-        <div>
-            <h3 class="font-bold text-2xl">Copyright</h3>
-            <p id="copyright-p"></p>
-            <script src="scripts/copyright.js"></script>
-            <script src="scripts/scroll.js"></script>
-        </div>
-
-    </footer>
 </body>
 
 </html>
