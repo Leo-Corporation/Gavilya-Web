@@ -28,6 +28,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&display=swap"
         rel="stylesheet">
+    <link href="css/animations.css" rel="stylesheet" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0EC2QLLXKJ"></script>
@@ -74,22 +75,34 @@
 
     <div class="m-8 text-white">
         <div id="content" class="my-16">
-            <h2 class="text-white font-bold text-4xl text-center">Screenshots</h2>
-            <p class="text-center mb-16">You can find here screenshots of Gavilya.</p>
+            <h2 class="opacity-0 fadeIn text-white font-bold text-4xl text-center">Screenshots</h2>
+            <p class="opacity-0 fadeIn delay-1 text-center mb-16">You can find here screenshots of Gavilya.</p>
 
             <div class="flex flex-col justify-center">
-                <img alt="Image" src="img/screenshot2.png" class="max-h-full mx-2 sm:mx-16 md:mx-32">
-                <p class="text-center mb-2 italic">The "Card" view of Gavilya.</p>
-                <img alt="Image" src="img/screenshot4.png" class="max-h-full mx-2 sm:mx-16 md:mx-32">
-                <p class="text-center mb-2 italic">The "Recent" view of Gavilya.</p>
-                <img alt="Image" src="img/screenshot5.png" class="max-h-full mx-2 sm:mx-16 md:mx-32">
-                <p class="text-center mb-2 italic">The "List" view of Gavilya.</p>
-                <img alt="Image" src="img/screenshot3.png" class="max-h-full mx-2 sm:mx-16 md:mx-32">
-                <p class="text-center mb-2 italic">The "About" section of the "Details" page.</p>
-                <img alt="Image" src="img/screenshot1.png" class="max-h-full mx-2 sm:mx-16 md:mx-32">
-                <p class="text-center mb-2 italic">The "Ratings" section of the "Details" page.</p>
-                <img alt="Image" src="img/screenshot6.png" class="max-h-full mx-2 sm:mx-16 md:mx-32">
-                <p class="text-center mb-2 italic">The "Achievements" section of the "Details" page.</p>
+                <div id="card-view" class="opacity-0">
+                    <img alt="Image" src="img/screenshot2.png" class="max-h-full mx-2 sm:mx-16 md:mx-32">
+                    <p class="text-center mb-2 italic">The "Card" view of Gavilya.</p>
+                </div>
+                <div id="recent-view" class="opacity-0">
+                    <img alt="Image" src="img/screenshot4.png" class="max-h-full mx-2 sm:mx-16 md:mx-32">
+                    <p class="text-center mb-2 italic">The "Recent" view of Gavilya.</p>
+                </div>
+                <div id="list-view" class="opacity-0">
+                    <img alt="Image" src="img/screenshot5.png" class="max-h-full mx-2 sm:mx-16 md:mx-32">
+                    <p class="text-center mb-2 italic">The "List" view of Gavilya.</p>
+                </div>
+                <div id="about-details" class="opacity-0">
+                    <img alt="Image" src="img/screenshot3.png" class="max-h-full mx-2 sm:mx-16 md:mx-32">
+                    <p class="text-center mb-2 italic">The "About" section of the "Details" page.</p>
+                </div>
+                <div id="ratings-details" class="opacity-0">
+                    <img alt="Image" src="img/screenshot1.png" class="max-h-full mx-2 sm:mx-16 md:mx-32">
+                    <p class="text-center mb-2 italic">The "Ratings" section of the "Details" page.</p>
+                </div>
+                <div id="achievement-details" class="opacity-0">
+                    <img alt="Image" src="img/screenshot6.png" class="max-h-full mx-2 sm:mx-16 md:mx-32">
+                    <p class="text-center mb-2 italic">The "Achievements" section of the "Details" page.</p>
+                </div>
             </div>
 
             <div id="download" class="text-white grid grid-rows-3 mt-16 flex justify-center">
@@ -136,6 +149,7 @@
     </footer>
     <script src="scripts/copyright.js"></script>
     <script src="scripts/scroll.js"></script>
+    <script src="scripts/animations.js"></script>
 </body>
 
 </html>
