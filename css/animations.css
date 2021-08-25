@@ -30,6 +30,22 @@
     }
 }
 
+.slideFromRight {
+    animation: slideFromRight 1s ease 0s 1 normal forwards;
+}
+
+@keyframes slideFromRight {
+    0% {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
 .delay-1 {
     animation-delay: 0.12s;
 }
