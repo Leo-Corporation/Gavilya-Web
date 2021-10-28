@@ -20,9 +20,11 @@ function animateOnView(elementId, classesToApply) {
     observer.observe(document.getElementById(elementId));
 }
 
+animateOnView("home-page", ["slideInUp", "fadeIn"]);
 animateOnView("card-view", ["slideInUp", "fadeIn"]);
 animateOnView("recent-view", ["slideInUp", "fadeIn"]);
 animateOnView("list-view", ["slideInUp", "fadeIn"]);
 animateOnView("about-details", ["slideInUp", "fadeIn"]);
 animateOnView("ratings-details", ["slideInUp", "fadeIn"]);
 animateOnView("achievement-details", ["slideInUp", "fadeIn"]);
+animateOnView("profile-page", ["slideInUp", "fadeIn"]);
