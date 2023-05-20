@@ -1,194 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Social networks meta -->
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://gavilya.leocorporation.dev/img/social.png">
-    <meta name="twitter:description" content="Gavilya is a simple game launcher for Windows.">
-    <meta name="twitter:title" content="Gavilya">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://gavilya.leocorporation.dev/img/social.png"
+    />
+    <meta
+      name="twitter:description"
+      content="Gavilya is a simple game launcher for Windows."
+    />
+    <meta name="twitter:title" content="Gavilya" />
 
     <!-- Facebook/Linkedin -->
-    <meta property="og:description" content="Gavilya is a simple game launcher for Windows.">
-    <meta property="og:image" content="https://gavilya.leocorporation.dev/img/social.png">
-    <meta property="og:title" content="Gavilya">
+    <meta
+      property="og:description"
+      content="Gavilya is a simple game launcher for Windows."
+    />
+    <meta
+      property="og:image"
+      content="https://gavilya.leocorporation.dev/img/social.png"
+    />
+    <meta property="og:title" content="Gavilya" />
 
-    <meta name="description" content="Gavilya is a simple game launcher for Windows.">
+    <meta
+      name="description"
+      content="Gavilya is a simple game launcher for Windows."
+    />
 
-    <script data-ad-client="ca-pub-7416572564791547" async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <link href="css/tailwind.css" rel="stylesheet">
+    <script
+      data-ad-client="ca-pub-7416572564791547"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+    <link href="css/tailwind.css" rel="stylesheet" />
 
     <link href="css/animations.css" rel="stylesheet" />
 
     <style>
-        @font-face {
-            font-family: "Hauora";
-            src: url("fonts/Hauora-Regular.ttf") format("truetype");
-            font-weight: 400;
-            font-style: normal;
-        }
+      @font-face {
+        font-family: "Hauora";
+        src: url("fonts/Hauora-Regular.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+      }
 
-        @font-face {
-            font-family: "Hauora";
-            src: url("fonts/Hauora-Bold.ttf") format("truetype");
-            font-weight: 700;
-        }
+      @font-face {
+        font-family: "Hauora";
+        src: url("fonts/Hauora-Bold.ttf") format("truetype");
+        font-weight: 700;
+      }
 
-        @font-face {
-            font-family: "Hauora";
-            src: url("fonts/Hauora-ExtraBold.ttf") format("truetype");
-            font-weight: 900;
-        }
+      @font-face {
+        font-family: "Hauora";
+        src: url("fonts/Hauora-ExtraBold.ttf") format("truetype");
+        font-weight: 900;
+      }
 
-        @font-face {
-            font-family: "Hauora";
-            src: url("fonts/Hauora-SemiBold.ttf") format("truetype");
-            font-weight: 600;
-        }
+      @font-face {
+        font-family: "Hauora";
+        src: url("fonts/Hauora-SemiBold.ttf") format("truetype");
+        font-weight: 600;
+      }
     </style>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0EC2QLLXKJ"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-0EC2QLLXKJ"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-0EC2QLLXKJ');
+      gtag("config", "G-0EC2QLLXKJ");
     </script>
 
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <title>Screenshots | Gavilya</title>
     <h1>Gavilya, a simple game launcher</h1>
-</head>
+  </head>
 
-<body style="background-color: rgb(0, 0, 20); font-family: 'Hauora', sans-serif;">
-    <header id="header" x-data="{ mobileMenuOpen : false }" style="z-index: 1000;"
-        class="backdrop-filter transition backdrop-blur-lg flex flex-wrap flex-row justify-between md:items-center md:space-x-4 sticky top-0 w-full py-6 px-6 text-white">
-        <a href="index" class="block">
-            <span class="sr-only">Léo Corporation</span>
-            <img class="h-6 md:h-8" src="img/Gavilya.png" alt="Home logo" title="Home">
-        </a>
-        <button style="background-color: rgb(20, 20, 40);" @click="mobileMenuOpen = !mobileMenuOpen"
-            class="inline-block md:hidden w-8 h-8 text-white p-1">
-            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                    clip-rule="evenodd"></path>
-            </svg>
-        </button>
-        <nav class="absolute md:relative top-16 left-0 md:top-0 z-20 md:flex flex-col md:flex-row md:space-x-6 font-semibold w-full md:w-auto bg-black shadow-md rounded-lg md:rounded-none md:shadow-none md:bg-transparent p-6 pt-0 md:p-0"
-            :class="{ 'flex' : mobileMenuOpen , 'hidden' : !mobileMenuOpen}" @click.away="mobileMenuOpen = false">
-            <a class="rounded-xl bg-gradient-to-r hover:from-purple-600 hover:to-purple-700 px-5 py-3 transition"
-                href="index">Home</a>
-            <a class="rounded-xl bg-gradient-to-r hover:from-purple-600 hover:to-purple-700 px-5 py-3 transition"
-                href="download">Download</a>
-            <a class="font-bold bg-gradient-to-r from-purple-600 to-purple-700 rounded-xl px-5 py-3"
-                href="#">Screenshots</a>
-            <a class="rounded-xl bg-gradient-to-r hover:from-purple-600 hover:to-purple-700 px-5 py-3 transition"
-                href="about">About</a>
-        </nav>
+  <body
+    style="background-color: rgb(0, 0, 20); font-family: 'Hauora', sans-serif"
+  >
+    <header
+      id="header"
+      x-data="{ mobileMenuOpen : false }"
+      style="z-index: 1000"
+      class="backdrop-filter transition backdrop-blur-lg flex flex-wrap flex-row justify-between md:items-center md:space-x-4 sticky top-0 w-full py-6 px-6 text-white"
+    >
+      <a href="index" class="block">
+        <span class="sr-only">Léo Corporation</span>
+        <img
+          class="h-6 md:h-8"
+          src="img/Gavilya.png"
+          alt="Home logo"
+          title="Home"
+        />
+      </a>
+      <button
+        style="background-color: rgb(20, 20, 40)"
+        @click="mobileMenuOpen = !mobileMenuOpen"
+        class="inline-block md:hidden w-8 h-8 text-white p-1"
+      >
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+      <nav
+        class="absolute md:relative top-16 left-0 md:top-0 z-20 md:flex flex-col md:flex-row md:space-x-6 font-semibold w-full md:w-auto bg-black shadow-md rounded-lg md:rounded-none md:shadow-none md:bg-transparent p-6 pt-0 md:p-0"
+        :class="{ 'flex' : mobileMenuOpen , 'hidden' : !mobileMenuOpen}"
+        @click.away="mobileMenuOpen = false"
+      >
+        <a
+          class="rounded-xl bg-gradient-to-r hover:from-purple-600 hover:to-purple-700 px-5 py-3 transition"
+          href="index"
+          >Home</a
+        >
+        <a
+          class="rounded-xl bg-gradient-to-r hover:from-purple-600 hover:to-purple-700 px-5 py-3 transition"
+          href="download"
+          >Download</a
+        >
+        <a
+          class="font-bold bg-gradient-to-r from-purple-600 to-purple-700 rounded-xl px-5 py-3"
+          href="#"
+          >Screenshots</a
+        >
+        <a
+          class="rounded-xl bg-gradient-to-r hover:from-purple-600 hover:to-purple-700 px-5 py-3 transition"
+          href="themes"
+          >Themes</a
+        >
+        <a
+          class="rounded-xl bg-gradient-to-r hover:from-purple-600 hover:to-purple-700 px-5 py-3 transition"
+          href="about"
+          >About</a
+        >
+      </nav>
     </header>
 
     <div class="m-8 text-white">
-        <div id="content" class="my-16">
-            <h2 class="opacity-0 fadeIn text-white font-bold text-4xl text-center">Screenshots</h2>
-            <p class="opacity-0 fadeIn delay-1 text-center mb-16">You can find here screenshots of Gavilya.</p>
+      <div id="content" class="my-16">
+        <h2 class="opacity-0 fadeIn text-white font-bold text-4xl text-center">
+          Screenshots
+        </h2>
+        <p class="opacity-0 fadeIn delay-1 text-center mb-16">
+          You can find here screenshots of Gavilya.
+        </p>
 
-            <div class="flex flex-col justify-center">
-                <div id="home-page" class="opacity-0 flex flex-col justify-center">
-                    <img alt="Image" src="img/screenshot7.png" class="max-h-full mx-2 sm:mx-16 md:mx-32">
-                    <p class="text-center mb-2 italic">The "Home" page of Gavilya.</p>
-                </div>
-                <div id="card-view" class="opacity-0 flex flex-col justify-center">
-                    <img alt="Image" src="img/screenshot2.png" class="max-h-full mx-2 sm:mx-16 md:mx-32">
-                    <p class="text-center mb-2 italic">The "Card" view of Gavilya.</p>
-                </div>
-                <div id="recent-view" class="opacity-0 flex flex-col justify-center">
-                    <img alt="Image" src="img/screenshot4.png" class="max-h-full mx-2 sm:mx-16 md:mx-32">
-                    <p class="text-center mb-2 italic">The "Recent" view of Gavilya.</p>
-                </div>
-                <div id="list-view" class="opacity-0 flex flex-col justify-center">
-                    <img alt="Image" src="img/screenshot3.png" class="max-h-full mx-2 sm:mx-16 md:mx-32">
-                    <p class="text-center mb-2 italic">The "List" view of Gavilya.</p>
-                </div>
-                <div id="about-details" class="opacity-0 flex flex-col justify-center">
-                    <img alt="Image" src="img/screenshot5.png" class="max-h-full mx-2 sm:mx-16 md:mx-32">
-                    <p class="text-center mb-2 italic">The "About" section of the "Details" page.</p>
-                </div>
-                <div id="ratings-details" class="opacity-0 flex flex-col justify-center">
-                    <img alt="Image" src="img/screenshot1.png" class="max-h-full mx-2 sm:mx-16 md:mx-32">
-                    <p class="text-center mb-2 italic">The "Ratings" section of the "Details" page.</p>
-                </div>
-                <div id="achievement-details" class="opacity-0 flex flex-col justify-center">
-                    <img alt="Image" src="img/screenshot6.png" class="max-h-full mx-2 sm:mx-16 md:mx-32">
-                    <p class="text-center mb-2 italic">The "Achievements" section of the "Details" page.</p>
-                </div>
-                <div id="profile-page" class="opacity-0 flex flex-col justify-center">
-                    <img alt="Image" src="img/screenshot8.png" class="max-h-full mx-2 sm:mx-16 md:mx-32">
-                    <p class="text-center mb-2 italic">The "Profile" page of Gavilya.</p>
-                </div>
-            </div>
-
-            <div id="download" class="text-white grid grid-rows-3 mt-16 flex justify-center">
-                <h2 class="text-white font-bold text-4xl text-center">Download</h2>
-                <p class="text-center">Gavilya is available only on Windows and is free.</p>
-                <a class="text-center mx-24 font-bold bg-gradient-to-b from-blue-600 to-blue-700 rounded-xl p-5 hover:from-blue-700 hover:to-blue-800"
-                    href="https://bit.ly/Gavilya">Download Gavilya</a>
-            </div>
+        <div class="flex flex-col justify-center">
+          <div id="home-page" class="opacity-0 flex flex-col justify-center">
+            <img
+              alt="Image"
+              src="img/screenshot7.png"
+              class="max-h-full mx-2 sm:mx-16 md:mx-32"
+            />
+            <p class="text-center mb-2 italic">The "Home" page of Gavilya.</p>
+          </div>
+          <div id="card-view" class="opacity-0 flex flex-col justify-center">
+            <img
+              alt="Image"
+              src="img/screenshot2.png"
+              class="max-h-full mx-2 sm:mx-16 md:mx-32"
+            />
+            <p class="text-center mb-2 italic">The "Card" view of Gavilya.</p>
+          </div>
+          <div id="recent-view" class="opacity-0 flex flex-col justify-center">
+            <img
+              alt="Image"
+              src="img/screenshot4.png"
+              class="max-h-full mx-2 sm:mx-16 md:mx-32"
+            />
+            <p class="text-center mb-2 italic">The "Recent" view of Gavilya.</p>
+          </div>
+          <div id="list-view" class="opacity-0 flex flex-col justify-center">
+            <img
+              alt="Image"
+              src="img/screenshot3.png"
+              class="max-h-full mx-2 sm:mx-16 md:mx-32"
+            />
+            <p class="text-center mb-2 italic">The "List" view of Gavilya.</p>
+          </div>
+          <div
+            id="about-details"
+            class="opacity-0 flex flex-col justify-center"
+          >
+            <img
+              alt="Image"
+              src="img/screenshot5.png"
+              class="max-h-full mx-2 sm:mx-16 md:mx-32"
+            />
+            <p class="text-center mb-2 italic">
+              The "About" section of the "Details" page.
+            </p>
+          </div>
+          <div
+            id="ratings-details"
+            class="opacity-0 flex flex-col justify-center"
+          >
+            <img
+              alt="Image"
+              src="img/screenshot1.png"
+              class="max-h-full mx-2 sm:mx-16 md:mx-32"
+            />
+            <p class="text-center mb-2 italic">
+              The "Ratings" section of the "Details" page.
+            </p>
+          </div>
+          <div
+            id="achievement-details"
+            class="opacity-0 flex flex-col justify-center"
+          >
+            <img
+              alt="Image"
+              src="img/screenshot6.png"
+              class="max-h-full mx-2 sm:mx-16 md:mx-32"
+            />
+            <p class="text-center mb-2 italic">
+              The "Achievements" section of the "Details" page.
+            </p>
+          </div>
+          <div id="profile-page" class="opacity-0 flex flex-col justify-center">
+            <img
+              alt="Image"
+              src="img/screenshot8.png"
+              class="max-h-full mx-2 sm:mx-16 md:mx-32"
+            />
+            <p class="text-center mb-2 italic">
+              The "Profile" page of Gavilya.
+            </p>
+          </div>
         </div>
+
+        <div
+          id="download"
+          class="text-white grid grid-rows-3 mt-16 flex justify-center"
+        >
+          <h2 class="text-white font-bold text-4xl text-center">Download</h2>
+          <p class="text-center">
+            Gavilya is available only on Windows and is free.
+          </p>
+          <a
+            class="text-center mx-24 font-bold bg-gradient-to-b from-blue-600 to-blue-700 rounded-xl p-5 hover:from-blue-700 hover:to-blue-800"
+            href="https://bit.ly/Gavilya"
+            >Download Gavilya</a
+          >
+        </div>
+      </div>
     </div>
 
-    <footer class="grid grid-cols-1 sm:grid-cols-2 p-16 bg-gray-900 text-gray-400">
-        <div class="flex flex-col">
-            <h3 class="font-bold mb-5">
-                ABOUT
-            </h3>
-            <p id="copyright">© Léo Corporation</p>
-            <a href="https://privacy.leocorporation.dev/" class="hover:underline">Privacy Policy</a>
-            <a href="https://status.leocorporation.dev/" class="hover:underline">Status</a>
+    <footer
+      class="grid grid-cols-1 sm:grid-cols-2 p-16 bg-gray-900 text-gray-400"
+    >
+      <div class="flex flex-col">
+        <h3 class="font-bold mb-5">ABOUT</h3>
+        <p id="copyright">© Léo Corporation</p>
+        <a href="https://privacy.leocorporation.dev/" class="hover:underline"
+          >Privacy Policy</a
+        >
+        <a href="https://status.leocorporation.dev/" class="hover:underline"
+          >Status</a
+        >
+      </div>
+      <div id="social-networks" class="flex flex-col mt-4 sm:mt-0">
+        <h3 class="font-bold mb-5">SOCIAL</h3>
+        <div class="flex">
+          <a
+            title="GitHub"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/Leo-Corporation/"
+          >
+            <img
+              alt="Image"
+              class="h-6 mr-5"
+              src="https://img.icons8.com/fluent-systems-filled/48/9ca3af/github.png"
+            />
+          </a>
+          <a
+            title="Twitter"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://twitter.com/LeoCorpNews"
+          >
+            <img
+              alt="Image"
+              class="h-6 mr-5"
+              src="https://img.icons8.com/fluent-systems-filled/48/9ca3af/twitter.png"
+            />
+          </a>
+          <a
+            title="YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.youtube.com/channel/UC283Dtf6EJ8eKfRoo0ISmqg"
+          >
+            <img
+              alt="Image"
+              class="h-6 mr-5"
+              src="https://img.icons8.com/fluency-systems-filled/48/9ca3af/youtube-play.png"
+            />
+          </a>
+          <a
+            title="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.instagram.com/leocorporation_/"
+          >
+            <img
+              alt="Image"
+              class="h-6 mr-5"
+              src="https://img.icons8.com/fluency-systems-filled/48/9ca3af/instagram-new.png"
+            />
+          </a>
+          <a
+            title="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.facebook.com/LeoCorporationSoftwares/"
+          >
+            <img
+              alt="Image"
+              class="h-6 mr-5"
+              src="https://img.icons8.com/fluency-systems-filled/48/9ca3af/facebook-new.png"
+            />
+          </a>
         </div>
-        <div id="social-networks" class="flex flex-col mt-4 sm:mt-0">
-            <h3 class="font-bold mb-5">
-                SOCIAL
-            </h3>
-            <div class="flex">
-                <a title="GitHub" target="_blank" rel="noopener noreferrer" href="https://github.com/Leo-Corporation/">
-                    <img alt="Image" class="h-6 mr-5"
-                        src="https://img.icons8.com/fluent-systems-filled/48/9ca3af/github.png" />
-                </a>
-                <a title="Twitter" target="_blank" rel="noopener noreferrer" href="https://twitter.com/LeoCorpNews">
-                    <img alt="Image" class="h-6 mr-5"
-                        src="https://img.icons8.com/fluent-systems-filled/48/9ca3af/twitter.png" />
-                </a>
-                <a title="YouTube" target="_blank" rel="noopener noreferrer"
-                    href="https://www.youtube.com/channel/UC283Dtf6EJ8eKfRoo0ISmqg">
-                    <img alt="Image" class="h-6 mr-5"
-                        src="https://img.icons8.com/fluency-systems-filled/48/9ca3af/youtube-play.png" />
-                </a>
-                <a title="Instagram" target="_blank" rel="noopener noreferrer"
-                    href="https://www.instagram.com/leocorporation_/">
-                    <img alt="Image" class="h-6 mr-5"
-                        src="https://img.icons8.com/fluency-systems-filled/48/9ca3af/instagram-new.png" />
-                </a>
-                <a title="Facebook" target="_blank" rel="noopener noreferrer"
-                    href="https://www.facebook.com/LeoCorporationSoftwares/">
-                    <img alt="Image" class="h-6 mr-5"
-                        src="https://img.icons8.com/fluency-systems-filled/48/9ca3af/facebook-new.png" />
-                </a>
-            </div>
-        </div>
+      </div>
     </footer>
     <script src="scripts/copyright.js"></script>
     <script src="scripts/scroll.js"></script>
     <script src="scripts/animations.js"></script>
-</body>
-
+  </body>
 </html>

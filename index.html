@@ -1,311 +1,512 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Social networks meta -->
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://gavilya.leocorporation.dev/img/social.png">
-    <meta name="twitter:description" content="Gavilya is a simple game launcher for Windows.">
-    <meta name="twitter:title" content="Gavilya">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://gavilya.leocorporation.dev/img/social.png"
+    />
+    <meta
+      name="twitter:description"
+      content="Gavilya is a simple game launcher for Windows."
+    />
+    <meta name="twitter:title" content="Gavilya" />
 
     <!-- Facebook/Linkedin -->
-    <meta property="og:description" content="Gavilya is a simple game launcher for Windows.">
-    <meta property="og:image" content="https://gavilya.leocorporation.dev/img/social.png">
-    <meta property="og:title" content="Gavilya">
+    <meta
+      property="og:description"
+      content="Gavilya is a simple game launcher for Windows."
+    />
+    <meta
+      property="og:image"
+      content="https://gavilya.leocorporation.dev/img/social.png"
+    />
+    <meta property="og:title" content="Gavilya" />
 
-    <meta name="description" content="Gavilya is a simple game launcher for Windows.">
+    <meta
+      name="description"
+      content="Gavilya is a simple game launcher for Windows."
+    />
 
-    <script data-ad-client="ca-pub-7416572564791547" async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <link href="css/tailwind.css" rel="stylesheet">
+    <script
+      data-ad-client="ca-pub-7416572564791547"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+    <link href="css/tailwind.css" rel="stylesheet" />
 
     <link href="css/animations.css" rel="stylesheet" />
     <style>
-        @font-face {
-            font-family: "FluentIconsFilled";
-            src: url("fonts/FluentSystemIcons-Filled.ttf");
-        }
+      @font-face {
+        font-family: "FluentIconsFilled";
+        src: url("fonts/FluentSystemIcons-Filled.ttf");
+      }
 
-        @font-face {
-            font-family: "Hauora";
-            src: url("fonts/Hauora-Regular.ttf") format("truetype");
-            font-weight: 400;
-            font-style: normal;
-        }
+      @font-face {
+        font-family: "Hauora";
+        src: url("fonts/Hauora-Regular.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+      }
 
-        @font-face {
-            font-family: "Hauora";
-            src: url("fonts/Hauora-Bold.ttf") format("truetype");
-            font-weight: 700;
-        }
+      @font-face {
+        font-family: "Hauora";
+        src: url("fonts/Hauora-Bold.ttf") format("truetype");
+        font-weight: 700;
+      }
 
-        @font-face {
-            font-family: "Hauora";
-            src: url("fonts/Hauora-ExtraBold.ttf") format("truetype");
-            font-weight: 900;
-        }
+      @font-face {
+        font-family: "Hauora";
+        src: url("fonts/Hauora-ExtraBold.ttf") format("truetype");
+        font-weight: 900;
+      }
 
-        @font-face {
-            font-family: "Hauora";
-            src: url("fonts/Hauora-SemiBold.ttf") format("truetype");
-            font-weight: 600;
-        }
+      @font-face {
+        font-family: "Hauora";
+        src: url("fonts/Hauora-SemiBold.ttf") format("truetype");
+        font-weight: 600;
+      }
     </style>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0EC2QLLXKJ"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-0EC2QLLXKJ"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-0EC2QLLXKJ');
+      gtag("config", "G-0EC2QLLXKJ");
     </script>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7416572564791547"
-        crossorigin="anonymous"></script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7416572564791547"
+      crossorigin="anonymous"
+    ></script>
 
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <title>Gavilya - A simple game launcher</title>
     <h1>Gavilya, a simple game launcher</h1>
-</head>
+  </head>
 
-<body style="background-color: rgb(0, 0, 20); font-family: 'Hauora', sans-serif;">
-    <header id="header" x-data="{ mobileMenuOpen : false }" style="z-index: 1000;"
-        class="backdrop-filter transition backdrop-blur-lg flex flex-wrap flex-row justify-between md:items-center md:space-x-4 sticky top-0 w-full py-6 px-6 text-white">
-        <a href="#" class="block">
-            <span class="sr-only">Léo Corporation</span>
-            <img class="h-6 md:h-8" src="img/Gavilya.png" alt="Home logo" title="Home">
-        </a>
-        <button style="background-color: rgb(20, 20, 40);" @click="mobileMenuOpen = !mobileMenuOpen"
-            class="inline-block md:hidden w-8 h-8 text-white p-1">
-            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                    clip-rule="evenodd"></path>
-            </svg>
-        </button>
-        <nav class="absolute md:relative top-16 left-0 md:top-0 z-20 md:flex flex-col md:flex-row md:space-x-6 font-semibold w-full md:w-auto bg-black shadow-md rounded-lg md:rounded-none md:shadow-none md:bg-transparent p-6 pt-0 md:p-0"
-            :class="{ 'flex' : mobileMenuOpen , 'hidden' : !mobileMenuOpen}" @click.away="mobileMenuOpen = false">
-            <a class="font-bold bg-gradient-to-r from-purple-600 to-purple-700 rounded-xl px-5 py-3" href="#">Home</a>
-            <a class="rounded-xl bg-gradient-to-r hover:from-purple-600 hover:to-purple-700 px-5 py-3 transition"
-                href="download">Download</a>
-            <a class="rounded-xl bg-gradient-to-r hover:from-purple-600 hover:to-purple-700 px-5 py-3 transition"
-                href="screenshots">Screenshots</a>
-            <a class="rounded-xl bg-gradient-to-r hover:from-purple-600 hover:to-purple-700 px-5 py-3 transition"
-                href="about">About</a>
-        </nav>
+  <body
+    style="background-color: rgb(0, 0, 20); font-family: 'Hauora', sans-serif"
+  >
+    <header
+      id="header"
+      x-data="{ mobileMenuOpen : false }"
+      style="z-index: 1000"
+      class="backdrop-filter transition backdrop-blur-lg flex flex-wrap flex-row justify-between md:items-center md:space-x-4 sticky top-0 w-full py-6 px-6 text-white"
+    >
+      <a href="#" class="block">
+        <span class="sr-only">Léo Corporation</span>
+        <img
+          class="h-6 md:h-8"
+          src="img/Gavilya.png"
+          alt="Home logo"
+          title="Home"
+        />
+      </a>
+      <button
+        style="background-color: rgb(20, 20, 40)"
+        @click="mobileMenuOpen = !mobileMenuOpen"
+        class="inline-block md:hidden w-8 h-8 text-white p-1"
+      >
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+      <nav
+        class="absolute md:relative top-16 left-0 md:top-0 z-20 md:flex flex-col md:flex-row md:space-x-6 font-semibold w-full md:w-auto bg-black shadow-md rounded-lg md:rounded-none md:shadow-none md:bg-transparent p-6 pt-0 md:p-0"
+        :class="{ 'flex' : mobileMenuOpen , 'hidden' : !mobileMenuOpen}"
+        @click.away="mobileMenuOpen = false"
+      >
+        <a
+          class="font-bold bg-gradient-to-r from-purple-600 to-purple-700 rounded-xl px-5 py-3"
+          href="#"
+          >Home</a
+        >
+        <a
+          class="rounded-xl bg-gradient-to-r hover:from-purple-600 hover:to-purple-700 px-5 py-3 transition"
+          href="download"
+          >Download</a
+        >
+        <a
+          class="rounded-xl bg-gradient-to-r hover:from-purple-600 hover:to-purple-700 px-5 py-3 transition"
+          href="screenshots"
+          >Screenshots</a
+        >
+        <a
+          class="rounded-xl bg-gradient-to-r hover:from-purple-600 hover:to-purple-700 px-5 py-3 transition"
+          href="themes"
+          >Themes</a
+        >
+        <a
+          class="rounded-xl bg-gradient-to-r hover:from-purple-600 hover:to-purple-700 px-5 py-3 transition"
+          href="about"
+          >About</a
+        >
+      </nav>
     </header>
 
     <style>
-        #intro {
-            background-image: url('img/bg.svg');
-        }
+      #intro {
+        background-image: url("img/bg.svg");
+      }
     </style>
 
-    <div id="intro" class="min-h-screen items-center content-between grid grid-cols-1 sm:grid-cols-2 px-8 pt-16">
-        <div>
-            <h2 class="opacity-0 fadeIn text-white font-bold text-4xl">All your <span
-                    class="text-purple-600">games</span> in <span class="text-purple-600">one place</span>.</h2>
-            <p class="opacity-0 fadeIn delay-1 text-white my-8">Gavilya gathers all your video games in one
-                place.
-                Nowadays, more
-                and
-                more
-                games
-                are
-                available in different game launchers, and it is annoying for a lot of people. This is why we
-                created
-                Gavilya. A simple game launcher launcher with a lot of features and personalization.</p>
-            <div class="flex mt-5">
-                <a class="block btn-arrow p-3 my-3 mr-3 text-white hover:-translate-y-2 font-semibold rounded-md shadow-md bg-gradient-to-b from-blue-600 to-blue-700 rounded-xl p-5 hover:from-blue-700 hover:to-blue-800 transition"
-                    href="https://bit.ly/Gavilya">
-                    Download
-                </a>
-                <button onclick="scrollFunction1()"
-                    class="block btn-arrow p-3 my-3 mr-3 dark:text-white hover:-translate-y-2 font-semibold rounded-md shadow-md text-black bg-gray-100 hover:bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-700 transition">
-                    Learn More
-                </button>
-            </div>
+    <div
+      id="intro"
+      class="min-h-screen items-center content-between grid grid-cols-1 sm:grid-cols-2 px-8 pt-16"
+    >
+      <div>
+        <h2 class="opacity-0 fadeIn text-white font-bold text-4xl">
+          All your <span class="text-purple-600">games</span> in
+          <span class="text-purple-600">one place</span>.
+        </h2>
+        <p class="opacity-0 fadeIn delay-1 text-white my-8">
+          Gavilya gathers all your video games in one place. Nowadays, more and
+          more games are available in different game launchers, and it is
+          annoying for a lot of people. This is why we created Gavilya. A simple
+          game launcher launcher with a lot of features and personalization.
+        </p>
+        <div class="flex mt-5">
+          <a
+            class="block btn-arrow p-3 my-3 mr-3 text-white hover:-translate-y-2 font-semibold rounded-md shadow-md bg-gradient-to-b from-blue-600 to-blue-700 rounded-xl p-5 hover:from-blue-700 hover:to-blue-800 transition"
+            href="https://bit.ly/Gavilya"
+          >
+            Download
+          </a>
+          <button
+            onclick="scrollFunction1()"
+            class="block btn-arrow p-3 my-3 mr-3 dark:text-white hover:-translate-y-2 font-semibold rounded-md shadow-md text-black bg-gray-100 hover:bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-700 transition"
+          >
+            Learn More
+          </button>
         </div>
-        <div>
-            <img alt="Image" src="img/GavilyaHero.png" class="slideFromRight hidden sm:block sm:visible">
-        </div>
+      </div>
+      <div>
+        <img
+          alt="Image"
+          src="img/GavilyaHero.png"
+          class="slideFromRight hidden sm:block sm:visible"
+        />
+      </div>
     </div>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7416572564791547"
-        crossorigin="anonymous"></script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7416572564791547"
+      crossorigin="anonymous"
+    ></script>
     <!-- GavilyaAd1 -->
-    <ins class="adsbygoogle m-4 flex justify-center" data-ad-client="ca-pub-7416572564791547" data-ad-slot="9952875745"
-        data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <ins
+      class="adsbygoogle m-4 flex justify-center"
+      data-ad-client="ca-pub-7416572564791547"
+      data-ad-slot="9952875745"
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    ></ins>
     <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
+      (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
     <div id="features" class="text-white m-8">
-        <h2 class="text-white font-bold text-4xl text-center">Features</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-            <div id="rawg-integration" class="bg-gray-800 p-5 rounded-2xl m-2 shadow-lg">
-                <h2 class="text-2xl text-purple-600" style="font-family: FluentIconsFilled;"></h2>
-                <h3 class="font-bold text-2xl">RAWG.io integration</h3>
-                <p>Gavilya is integrated with the <abbr title="RAWG"><a href="https://rawg.io">RAWG.io</a></abbr>
-                    database. Thanks to this
-                    integration, Gavilya can auto-detect your games, download a cover image and the game's
-                    information.</p>
-            </div>
-            <div id="dark-theme" class="delay-1 bg-gray-800 p-5 rounded-2xl m-2 shadow-lg">
-                <h2 class="text-2xl text-purple-600" style="font-family: FluentIconsFilled;"></h2>
-                <h3 class="font-bold text-2xl">Dark theme</h3>
-                <p>Gamers love dark theme, that's why we've decided to make Gavilya only in dark theme. (Also,
-                    it
-                    looks better)</p>
-            </div>
-            <div id="multiple-views" class="delay-2 bg-gray-800 p-5 rounded-2xl m-2 shadow-lg">
-                <h2 class="text-2xl text-purple-600" style="font-family: FluentIconsFilled;">סּ</h2>
-                <h3 class="font-bold text-2xl">Multiple views</h3>
-                <p>When you launch Gavilya for the first time, you will land in the "Cards" view, but you may
-                    prefer
-                    a "List" view or even a "Recent" view. Gavilya offers the possibility to choose the view you
-                    like the most.</p>
-            </div>
-            <div id="languages" class="delay-3 bg-gray-800 p-5 rounded-2xl m-2 shadow-lg">
-                <h2 class="text-2xl text-purple-600" style="font-family: FluentIconsFilled;"></h2>
-                <h3 class="font-bold text-2xl">Languages</h3>
-                <p>Gavilya is available in multiple languages: English (United States), of course, and French
-                    (France).</p>
-            </div>
-            <div id="import-export" class="delay-4 bg-gray-800 p-5 rounded-2xl m-2 shadow-lg">
-                <h2 class="text-2xl text-purple-600" style="font-family: FluentIconsFilled;"></h2>
-                <h3 class="font-bold text-2xl">Import and export</h3>
-                <p>If you've installed Gavilya on a new PC, you may wanna get your games back in Gavilya.
-                    Gavilya
-                    offers the possibility to import and export games, so you won't loose your stats!</p>
-            </div>
-            <div id="favorite-bar" class="delay-5 bg-gray-800 p-5 rounded-2xl m-2 shadow-lg">
-                <h2 class="text-2xl text-purple-600" style="font-family: FluentIconsFilled;"></h2>
-                <h3 class="font-bold text-2xl">Favorite bar</h3>
-                <p>If you have a lot of games, but you want to quickly jump to your favorites, we've added a
-                    favorite
-                    bar in Gavilya. You can add and remove games to your favorites.</p>
-            </div>
+      <h2 class="text-white font-bold text-4xl text-center">Features</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        <div
+          id="rawg-integration"
+          class="bg-gray-800 p-5 rounded-2xl m-2 shadow-lg"
+        >
+          <h2
+            class="text-2xl text-purple-600"
+            style="font-family: FluentIconsFilled"
+          >
+            
+          </h2>
+          <h3 class="font-bold text-2xl">RAWG.io integration</h3>
+          <p>
+            Gavilya is integrated with the
+            <abbr title="RAWG"><a href="https://rawg.io">RAWG.io</a></abbr>
+            database. Thanks to this integration, Gavilya can auto-detect your
+            games, download a cover image and the game's information.
+          </p>
         </div>
+        <div
+          id="dark-theme"
+          class="delay-1 bg-gray-800 p-5 rounded-2xl m-2 shadow-lg"
+        >
+          <h2
+            class="text-2xl text-purple-600"
+            style="font-family: FluentIconsFilled"
+          >
+            
+          </h2>
+          <h3 class="font-bold text-2xl">Dark theme</h3>
+          <p>
+            Gamers love dark theme, that's why we've decided to make Gavilya
+            only in dark theme. (Also, it looks better)
+          </p>
+        </div>
+        <div
+          id="multiple-views"
+          class="delay-2 bg-gray-800 p-5 rounded-2xl m-2 shadow-lg"
+        >
+          <h2
+            class="text-2xl text-purple-600"
+            style="font-family: FluentIconsFilled"
+          >
+            סּ
+          </h2>
+          <h3 class="font-bold text-2xl">Multiple views</h3>
+          <p>
+            When you launch Gavilya for the first time, you will land in the
+            "Cards" view, but you may prefer a "List" view or even a "Recent"
+            view. Gavilya offers the possibility to choose the view you like the
+            most.
+          </p>
+        </div>
+        <div
+          id="languages"
+          class="delay-3 bg-gray-800 p-5 rounded-2xl m-2 shadow-lg"
+        >
+          <h2
+            class="text-2xl text-purple-600"
+            style="font-family: FluentIconsFilled"
+          >
+            
+          </h2>
+          <h3 class="font-bold text-2xl">Languages</h3>
+          <p>
+            Gavilya is available in multiple languages: English (United States),
+            of course, and French (France).
+          </p>
+        </div>
+        <div
+          id="import-export"
+          class="delay-4 bg-gray-800 p-5 rounded-2xl m-2 shadow-lg"
+        >
+          <h2
+            class="text-2xl text-purple-600"
+            style="font-family: FluentIconsFilled"
+          >
+            
+          </h2>
+          <h3 class="font-bold text-2xl">Import and export</h3>
+          <p>
+            If you've installed Gavilya on a new PC, you may wanna get your
+            games back in Gavilya. Gavilya offers the possibility to import and
+            export games, so you won't loose your stats!
+          </p>
+        </div>
+        <div
+          id="favorite-bar"
+          class="delay-5 bg-gray-800 p-5 rounded-2xl m-2 shadow-lg"
+        >
+          <h2
+            class="text-2xl text-purple-600"
+            style="font-family: FluentIconsFilled"
+          >
+            
+          </h2>
+          <h3 class="font-bold text-2xl">Favorite bar</h3>
+          <p>
+            If you have a lot of games, but you want to quickly jump to your
+            favorites, we've added a favorite bar in Gavilya. You can add and
+            remove games to your favorites.
+          </p>
+        </div>
+      </div>
     </div>
 
-    <div id="recommanded-games" class="text-white bg-gray-800 p-5 rounded-2xl m-8 shadow-lg">
-        <h3 class="text-6xl text-center text-purple-600" style="font-family: FluentIconsFilled;"></h3>
+    <div
+      id="recommanded-games"
+      class="text-white bg-gray-800 p-5 rounded-2xl m-8 shadow-lg"
+    >
+      <h3
+        class="text-6xl text-center text-purple-600"
+        style="font-family: FluentIconsFilled"
+      >
+        
+      </h3>
 
-        <h3 class="font-bold text-center text-2xl">Recommended games</h3>
+      <h3 class="font-bold text-center text-2xl">Recommended games</h3>
 
-        <p class="text-center mb-4">Based on your most played games, Gavilya will suggest games you could play
-            if you can't choose one.
-        </p>
+      <p class="text-center mb-4">
+        Based on your most played games, Gavilya will suggest games you could
+        play if you can't choose one.
+      </p>
     </div>
 
     <div id="performance" class="p-8">
-        <h2 class="text-white my-4 font-bold text-4xl text-center">Performance</h2>
-        <p class="text-white text-center mb-4">Since version 2.0, Gavilya saw huge performance improvements, see
-            in
-            the table
-            below*.</p>
-        <div class="flex flex-col items-center">
-            <div
-                class="bg-gray-800 p-5 m-5 grid grid-cols-2 sm:grid-cols-3 rounded-2xl text-white sm:w-3/6 md:w-8/12 w-9/12">
-                <div class="hidden sm:block">
-                    <span class="text-gray-800">\^o^/</span>
-                    <ul>
-                        <li class="font-bold">CPU Usage</li>
-                        <li class="font-bold">RAM Usage</li>
-                    </ul>
-                </div>
-                <div class="mx-2 my-auto">
-                    <p class="font-bold">In v1.9</p>
-                    <ul>
-                        <li>12.8%</li>
-                        <li>454 MB</li>
-                    </ul>
-                </div>
-                <div class="mx-2 my-auto">
-                    <p class="font-bold">In v2.0</p>
-                    <ul>
-                        <li>12.8%</li>
-                        <li>87.3 MB</li>
-                    </ul>
-                </div>
-            </div>
+      <h2 class="text-white my-4 font-bold text-4xl text-center">
+        Performance
+      </h2>
+      <p class="text-white text-center mb-4">
+        Since version 2.0, Gavilya saw huge performance improvements, see in the
+        table below*.
+      </p>
+      <div class="flex flex-col items-center">
+        <div
+          class="bg-gray-800 p-5 m-5 grid grid-cols-2 sm:grid-cols-3 rounded-2xl text-white sm:w-3/6 md:w-8/12 w-9/12"
+        >
+          <div class="hidden sm:block">
+            <span class="text-gray-800">\^o^/</span>
+            <ul>
+              <li class="font-bold">CPU Usage</li>
+              <li class="font-bold">RAM Usage</li>
+            </ul>
+          </div>
+          <div class="mx-2 my-auto">
+            <p class="font-bold">In v1.9</p>
+            <ul>
+              <li>12.8%</li>
+              <li>454 MB</li>
+            </ul>
+          </div>
+          <div class="mx-2 my-auto">
+            <p class="font-bold">In v2.0</p>
+            <ul>
+              <li>12.8%</li>
+              <li>87.3 MB</li>
+            </ul>
+          </div>
         </div>
-        <p class="sm:hidden block text-center mb-4 text-white italic">The first line is the CPU usage and the
-            second
-            one is the
-            RAM usage.</p>
-        <p class="ml-5 mb-4 text-white italic">*Tests were made on an Intel Core i5 11600K with 32GB of
-            RAM, running on Windows 10 21H1 with 17 games. </p>
+      </div>
+      <p class="sm:hidden block text-center mb-4 text-white italic">
+        The first line is the CPU usage and the second one is the RAM usage.
+      </p>
+      <p class="ml-5 mb-4 text-white italic">
+        *Tests were made on an Intel Core i5 11600K with 32GB of RAM, running on
+        Windows 10 21H1 with 17 games.
+      </p>
     </div>
 
     <div id="download" class="text-white grid grid-rows-3 flex justify-center">
-        <h2 class="text-white font-bold text-4xl text-center">Download</h2>
-        <p class="text-center">Gavilya is available only on Windows and is free.</p>
-        <a class="text-center mx-24 font-bold bg-gradient-to-b from-blue-600 to-blue-700 rounded-xl p-5 hover:from-blue-700 hover:to-blue-800"
-            href="https://bit.ly/Gavilya">Download Gavilya</a>
+      <h2 class="text-white font-bold text-4xl text-center">Download</h2>
+      <p class="text-center">
+        Gavilya is available only on Windows and is free.
+      </p>
+      <a
+        class="text-center mx-24 font-bold bg-gradient-to-b from-blue-600 to-blue-700 rounded-xl p-5 hover:from-blue-700 hover:to-blue-800"
+        href="https://bit.ly/Gavilya"
+        >Download Gavilya</a
+      >
     </div>
-    <footer class="grid grid-cols-1 sm:grid-cols-2 p-16 bg-gray-900 text-gray-400">
-        <div class="flex flex-col">
-            <h3 class="font-bold mb-5">
-                ABOUT
-            </h3>
-            <p id="copyright">© Léo Corporation</p>
-            <a href="https://privacy.leocorporation.dev/" class="hover:underline">Privacy Policy</a>
-            <a href="https://status.leocorporation.dev/" class="hover:underline">Status</a>
+    <footer
+      class="grid grid-cols-1 sm:grid-cols-2 p-16 bg-gray-900 text-gray-400"
+    >
+      <div class="flex flex-col">
+        <h3 class="font-bold mb-5">ABOUT</h3>
+        <p id="copyright">© Léo Corporation</p>
+        <a href="https://privacy.leocorporation.dev/" class="hover:underline"
+          >Privacy Policy</a
+        >
+        <a href="https://status.leocorporation.dev/" class="hover:underline"
+          >Status</a
+        >
+      </div>
+      <div id="social-networks" class="flex flex-col mt-4 sm:mt-0">
+        <h3 class="font-bold mb-5">SOCIAL</h3>
+        <div class="flex">
+          <a
+            title="GitHub"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/Leo-Corporation/"
+          >
+            <img
+              alt="Image"
+              class="h-6 mr-5"
+              src="https://img.icons8.com/fluent-systems-filled/48/9ca3af/github.png"
+            />
+          </a>
+          <a
+            title="Twitter"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://twitter.com/LeoCorpNews"
+          >
+            <img
+              alt="Image"
+              class="h-6 mr-5"
+              src="https://img.icons8.com/fluent-systems-filled/48/9ca3af/twitter.png"
+            />
+          </a>
+          <a
+            title="YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.youtube.com/channel/UC283Dtf6EJ8eKfRoo0ISmqg"
+          >
+            <img
+              alt="Image"
+              class="h-6 mr-5"
+              src="https://img.icons8.com/fluency-systems-filled/48/9ca3af/youtube-play.png"
+            />
+          </a>
+          <a
+            title="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.instagram.com/leocorporation_/"
+          >
+            <img
+              alt="Image"
+              class="h-6 mr-5"
+              src="https://img.icons8.com/fluency-systems-filled/48/9ca3af/instagram-new.png"
+            />
+          </a>
+          <a
+            title="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.facebook.com/LeoCorporationSoftwares/"
+          >
+            <img
+              alt="Image"
+              class="h-6 mr-5"
+              src="https://img.icons8.com/fluency-systems-filled/48/9ca3af/facebook-new.png"
+            />
+          </a>
         </div>
-        <div id="social-networks" class="flex flex-col mt-4 sm:mt-0">
-            <h3 class="font-bold mb-5">
-                SOCIAL
-            </h3>
-            <div class="flex">
-                <a title="GitHub" target="_blank" rel="noopener noreferrer" href="https://github.com/Leo-Corporation/">
-                    <img alt="Image" class="h-6 mr-5"
-                        src="https://img.icons8.com/fluent-systems-filled/48/9ca3af/github.png" />
-                </a>
-                <a title="Twitter" target="_blank" rel="noopener noreferrer" href="https://twitter.com/LeoCorpNews">
-                    <img alt="Image" class="h-6 mr-5"
-                        src="https://img.icons8.com/fluent-systems-filled/48/9ca3af/twitter.png" />
-                </a>
-                <a title="YouTube" target="_blank" rel="noopener noreferrer"
-                    href="https://www.youtube.com/channel/UC283Dtf6EJ8eKfRoo0ISmqg">
-                    <img alt="Image" class="h-6 mr-5"
-                        src="https://img.icons8.com/fluency-systems-filled/48/9ca3af/youtube-play.png" />
-                </a>
-                <a title="Instagram" target="_blank" rel="noopener noreferrer"
-                    href="https://www.instagram.com/leocorporation_/">
-                    <img alt="Image" class="h-6 mr-5"
-                        src="https://img.icons8.com/fluency-systems-filled/48/9ca3af/instagram-new.png" />
-                </a>
-                <a title="Facebook" target="_blank" rel="noopener noreferrer"
-                    href="https://www.facebook.com/LeoCorporationSoftwares/">
-                    <img alt="Image" class="h-6 mr-5"
-                        src="https://img.icons8.com/fluency-systems-filled/48/9ca3af/facebook-new.png" />
-                </a>
-            </div>
-        </div>
+      </div>
     </footer>
     <script src="scripts/copyright.js"></script>
     <script src="scripts/scroll.js"></script>
     <script src="scripts/animations-index.js"></script>
     <script>
-        function scrollFunction1() {
-            let e = document.getElementById("features");
-            e.scrollIntoView({
-                block: 'start',
-                behavior: 'smooth',
-                inline: 'start'
-            });
-        }
+      function scrollFunction1() {
+        let e = document.getElementById("features");
+        e.scrollIntoView({
+          block: "start",
+          behavior: "smooth",
+          inline: "start",
+        });
+      }
     </script>
-</body>
-
+  </body>
 </html>
