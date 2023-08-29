@@ -175,12 +175,13 @@
     <style>
       #intro {
         background-image: url("img/bg.svg");
+        background-size: cover;
       }
     </style>
 
     <div
       id="intro"
-      class="min-h-screen items-center content-between grid grid-cols-1 sm:grid-cols-2 px-8 pt-16"
+      class="min-h-screen items-center grid grid-cols-1 sm:grid-cols-2 px-8 pt-16"
     >
       <div>
         <h2 class="opacity-0 fadeIn text-white font-bold text-4xl">
@@ -234,182 +235,155 @@
       (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
-    <div id="features" class="text-white m-8">
+    <section id="features" class="text-white m-8">
       <h2 class="text-white font-bold text-4xl text-center">Features</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-        <div
-          id="rawg-integration"
-          class="bg-gray-800 p-5 rounded-2xl m-2 shadow-lg"
-        >
-          <h2
-            class="text-2xl text-purple-600"
+      <section class="flex sm:grid grid-cols-2 flex-col-reverse items-center">
+        <div class="m-2 p-2 sm:text-left text-center">
+          <p
+            class="text-purple-600 text-4xl"
             style="font-family: FluentIconsFilled"
           >
             
-          </h2>
-          <h3 class="font-bold text-2xl">RAWG.io integration</h3>
+          </p>
+          <h3 class="font-bold text-xl">For all gamers</h3>
           <p>
-            Gavilya is integrated with the
-            <abbr title="RAWG"><a href="https://rawg.io">RAWG.io</a></abbr>
-            database. Thanks to this integration, Gavilya can auto-detect your
-            games, download a cover image and the game's information.
+            Gavilya supports a wide range of game sources, including Steam, UWP
+            (Universal Windows Platform), and Win32 games. This compatibility
+            ensures that users can effortlessly add and manage their games,
+            regardless of their origin.
           </p>
         </div>
-        <div
-          id="dark-theme"
-          class="delay-1 bg-gray-800 p-5 rounded-2xl m-2 shadow-lg"
-        >
-          <h2
-            class="text-2xl text-purple-600"
+        <img src="img/2.png" alt="" />
+      </section>
+      <section class="flex sm:grid grid-cols-2 flex-col items-center">
+        <img src="img/1.png" alt="" />
+        <div class="m-2 p-2 sm:text-left text-center">
+          <p
+            class="text-purple-600 text-4xl"
             style="font-family: FluentIconsFilled"
           >
-            
-          </h2>
-          <h3 class="font-bold text-2xl">Dark theme</h3>
+            
+          </p>
+          <h3 class="font-bold text-xl">RAWG.io</h3>
           <p>
-            Gamers love dark theme, that's why we've decided to make Gavilya
-            only in dark theme. (Also, it looks better)
+            Gavilya incorporates the power of the RAWG.io database, allowing
+            users to fetch essential game information, such as cover art,
+            release dates, and descriptions, directly within the launcher. This
+            integration enhances the user experience by providing valuable
+            context for each game.
           </p>
         </div>
-        <div
-          id="multiple-views"
-          class="delay-2 bg-gray-800 p-5 rounded-2xl m-2 shadow-lg"
-        >
-          <h2
-            class="text-2xl text-purple-600"
+      </section>
+      <section class="flex sm:grid grid-cols-2 flex-col-reverse items-center">
+        <div class="m-2 p-2 sm:text-left text-center">
+          <p
+            class="text-purple-600 text-4xl"
             style="font-family: FluentIconsFilled"
           >
-            סּ
-          </h2>
-          <h3 class="font-bold text-2xl">Multiple views</h3>
+            
+          </p>
+          <h3 class="font-bold text-xl">Profiles</h3>
           <p>
-            When you launch Gavilya for the first time, you will land in the
-            "Cards" view, but you may prefer a "List" view or even a "Recent"
-            view. Gavilya offers the possibility to choose the view you like the
-            most.
+            With Gavilya's profile feature, users can create multiple profiles,
+            each tailored to a specific set of games or preferences. This
+            enables effortless switching between different gaming setups or
+            genres without the need for manual reorganization.
           </p>
         </div>
-        <div
-          id="languages"
-          class="delay-3 bg-gray-800 p-5 rounded-2xl m-2 shadow-lg"
-        >
-          <h2
-            class="text-2xl text-purple-600"
+        <img src="img/6.png" alt="" />
+      </section>
+      <section class="flex sm:grid grid-cols-2 flex-col items-center">
+        <img src="img/7.png" alt="" />
+        <div class="m-2 p-2 sm:text-left text-center">
+          <p
+            class="text-purple-600 text-4xl"
             style="font-family: FluentIconsFilled"
           >
-            
-          </h2>
-          <h3 class="font-bold text-2xl">Languages</h3>
+            
+          </p>
+          <h3 class="font-bold text-xl">Themes</h3>
           <p>
-            Gavilya is available in multiple languages: English (United States),
-            of course, and French (France).
+            Gavilya lets users personalize their launcher with a variety of
+            themes, enabling them to choose a visual style that resonates with
+            their gaming aesthetic. Themes offer a fresh look to the launcher
+            and enhance the overall gaming atmosphere.
           </p>
         </div>
-        <div
-          id="import-export"
-          class="delay-4 bg-gray-800 p-5 rounded-2xl m-2 shadow-lg"
-        >
-          <h2
-            class="text-2xl text-purple-600"
+      </section>
+      <section class="flex sm:grid grid-cols-2 flex-col-reverse items-center">
+        <div class="m-2 p-2 sm:text-left text-center">
+          <p
+            class="text-purple-600 text-4xl"
             style="font-family: FluentIconsFilled"
           >
-            
-          </h2>
-          <h3 class="font-bold text-2xl">Import and export</h3>
+            
+          </p>
+          <h3 class="font-bold text-xl">Game Tags</h3>
           <p>
-            If you've installed Gavilya on a new PC, you may wanna get your
-            games back in Gavilya. Gavilya offers the possibility to import and
-            export games, so you won't loose your stats!
+            Organizing games is made easier with the inclusion of game tags.
+            Users can assign custom tags to their games, such as genres or play
+            styles, facilitating quick and intuitive navigation through their
+            game library.
           </p>
         </div>
-        <div
-          id="favorite-bar"
-          class="delay-5 bg-gray-800 p-5 rounded-2xl m-2 shadow-lg"
-        >
-          <h2
-            class="text-2xl text-purple-600"
+        <img src="img/3.png" alt="" />
+      </section>
+      <section class="flex sm:grid grid-cols-2 flex-col items-center">
+        <img src="img/4.png" alt="" />
+        <div class="m-2 p-2 sm:text-left text-center">
+          <p
+            class="text-purple-600 text-4xl"
             style="font-family: FluentIconsFilled"
           >
-            
-          </h2>
-          <h3 class="font-bold text-2xl">Favorite bar</h3>
+            
+          </p>
+          <h3 class="font-bold text-xl">Multiple Views</h3>
           <p>
-            If you have a lot of games, but you want to quickly jump to your
-            favorites, we've added a favorite bar in Gavilya. You can add and
-            remove games to your favorites.
+            Gavilya offers different viewing options for users to explore their
+            game collection. These include "Recent" for recently played games,
+            "List" for a comprehensive overview, and "Tags" for grouping games
+            based on assigned tags. This flexibility allows users to choose the
+            view that best suits their needs.
           </p>
         </div>
-      </div>
-    </div>
+      </section>
+    </section>
 
     <div
-      id="recommanded-games"
-      class="text-white bg-gray-800 p-5 rounded-2xl m-8 shadow-lg"
+      id="download"
+      class="text-white flex flex-col items-center space-y-2 justify-center min-h-screen"
     >
-      <h3
-        class="text-6xl text-center text-purple-600"
-        style="font-family: FluentIconsFilled"
-      >
-        
-      </h3>
-
-      <h3 class="font-bold text-center text-2xl">Recommended games</h3>
-
-      <p class="text-center mb-4">
-        Based on your most played games, Gavilya will suggest games you could
-        play if you can't choose one.
-      </p>
-    </div>
-
-    <div id="performance" class="p-8">
-      <h2 class="text-white my-4 font-bold text-4xl text-center">
-        Performance
-      </h2>
-      <p class="text-white text-center mb-4">
-        Since version 2.0, Gavilya saw huge performance improvements, see in the
-        table below*.
-      </p>
-      <div class="flex flex-col items-center">
-        <div
-          class="bg-gray-800 p-5 m-5 grid grid-cols-2 sm:grid-cols-3 rounded-2xl text-white sm:w-3/6 md:w-8/12 w-9/12"
-        >
-          <div class="hidden sm:block">
-            <span class="text-gray-800">\^o^/</span>
-            <ul>
-              <li class="font-bold">CPU Usage</li>
-              <li class="font-bold">RAM Usage</li>
-            </ul>
-          </div>
-          <div class="mx-2 my-auto">
-            <p class="font-bold">In v1.9</p>
-            <ul>
-              <li>12.8%</li>
-              <li>454 MB</li>
-            </ul>
-          </div>
-          <div class="mx-2 my-auto">
-            <p class="font-bold">In v2.0</p>
-            <ul>
-              <li>12.8%</li>
-              <li>87.3 MB</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <p class="sm:hidden block text-center mb-4 text-white italic">
-        The first line is the CPU usage and the second one is the RAM usage.
-      </p>
-      <p class="ml-5 mb-4 text-white italic">
-        *Tests were made on an Intel Core i5 11600K with 32GB of RAM, running on
-        Windows 10 21H1 with 17 games.
-      </p>
-    </div>
-
-    <div id="download" class="text-white grid grid-rows-3 flex justify-center">
       <h2 class="text-white font-bold text-4xl text-center">Download</h2>
       <p class="text-center">
-        Gavilya is available only on Windows and is free.
+        By downloading Gavilya, you acknowledge that the app can have these
+        permissions:
       </p>
+      <div class="grid sm:grid-cols-[auto,auto] grid-cols-1 m-2 justify-center">
+        <p class="flex items-center">
+          <span class="mx-2" style="font-family: FluentIconsFilled"></span>Read
+          the registry
+        </p>
+        <p class="flex items-center">
+          <span class="mx-2" style="font-family: FluentIconsFilled"></span
+          >Download files and information from RAWG
+        </p>
+        <p class="flex items-center">
+          <span class="mx-2" style="font-family: FluentIconsFilled"></span
+          >Connect to the Internet
+        </p>
+        <p class="flex items-center">
+          <span class="mx-2" style="font-family: FluentIconsFilled"></span
+          >Download updates with your consent
+        </p>
+        <p class="flex items-center">
+          <span class="mx-2" style="font-family: FluentIconsFilled"></span
+          >Access your file system
+        </p>
+        <p class="flex items-center">
+          <span class="mx-2" style="font-family: FluentIconsFilled"></span
+          >Store your settings
+        </p>
+      </div>
       <a
         class="text-center mx-24 font-bold bg-gradient-to-b from-blue-600 to-blue-700 rounded-xl p-5 hover:from-blue-700 hover:to-blue-800"
         href="https://bit.ly/Gavilya"

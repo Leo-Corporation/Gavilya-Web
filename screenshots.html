@@ -72,6 +72,11 @@
         src: url("fonts/Hauora-SemiBold.ttf") format("truetype");
         font-weight: 600;
       }
+
+      @font-face {
+        font-family: "FluentIconsFilled";
+        src: url("fonts/FluentSystemIcons-Filled.ttf");
+      }
     </style>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -175,7 +180,7 @@
           <div id="home-page" class="opacity-0 flex flex-col justify-center">
             <img
               alt="Image"
-              src="img/screenshot7.png"
+              src="img/3.png"
               class="max-h-full mx-2 sm:mx-16 md:mx-32"
             />
             <p class="text-center mb-2 italic">The "Home" page of Gavilya.</p>
@@ -183,7 +188,7 @@
           <div id="card-view" class="opacity-0 flex flex-col justify-center">
             <img
               alt="Image"
-              src="img/screenshot2.png"
+              src="img/2.png"
               class="max-h-full mx-2 sm:mx-16 md:mx-32"
             />
             <p class="text-center mb-2 italic">The "Card" view of Gavilya.</p>
@@ -210,7 +215,7 @@
           >
             <img
               alt="Image"
-              src="img/screenshot5.png"
+              src="img/1.png"
               class="max-h-full mx-2 sm:mx-16 md:mx-32"
             />
             <p class="text-center mb-2 italic">
@@ -257,12 +262,41 @@
 
         <div
           id="download"
-          class="text-white grid grid-rows-3 mt-16 flex justify-center"
+          class="text-white flex flex-col items-center space-y-2 justify-center min-h-screen"
         >
           <h2 class="text-white font-bold text-4xl text-center">Download</h2>
           <p class="text-center">
-            Gavilya is available only on Windows and is free.
+            By downloading Gavilya, you acknowledge that the app can have these
+            permissions:
           </p>
+          <div
+            class="grid sm:grid-cols-[auto,auto] grid-cols-1 m-2 justify-center"
+          >
+            <p class="flex items-center">
+              <span class="mx-2" style="font-family: FluentIconsFilled"></span
+              >Read the registry
+            </p>
+            <p class="flex items-center">
+              <span class="mx-2" style="font-family: FluentIconsFilled"></span
+              >Download files and information from RAWG
+            </p>
+            <p class="flex items-center">
+              <span class="mx-2" style="font-family: FluentIconsFilled"></span
+              >Connect to the Internet
+            </p>
+            <p class="flex items-center">
+              <span class="mx-2" style="font-family: FluentIconsFilled"></span
+              >Download updates with your consent
+            </p>
+            <p class="flex items-center">
+              <span class="mx-2" style="font-family: FluentIconsFilled"></span
+              >Access your file system
+            </p>
+            <p class="flex items-center">
+              <span class="mx-2" style="font-family: FluentIconsFilled"></span
+              >Store your settings
+            </p>
+          </div>
           <a
             class="text-center mx-24 font-bold bg-gradient-to-b from-blue-600 to-blue-700 rounded-xl p-5 hover:from-blue-700 hover:to-blue-800"
             href="https://bit.ly/Gavilya"
