@@ -36,15 +36,15 @@
 
 @keyframes slideFromRight {
     0% {
-      opacity: 0;
-      transform: translateX(50px);
+        opacity: 0;
+        transform: translateX(50px);
     }
-  
+
     100% {
-      opacity: 1;
-      transform: translateX(0);
+        opacity: 1;
+        transform: translateX(0);
     }
-  }
+}
 
 .delay-1 {
     animation-delay: 0.12s;
@@ -59,7 +59,7 @@
 }
 
 .delay-4 {
-    animation-delay: 0.50s;
+    animation-delay: 0.5s;
 }
 
 .delay-5 {
